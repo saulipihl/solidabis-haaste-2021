@@ -1,0 +1,19 @@
+<h2>Results for {{ selectedCarData.name }}</h2>
+<span *ngIf="results.length === 0">Choose a car type to see results.</span>
+<div *ngIf="results.length > 0" class="wrapper">
+  <div></div>
+  <div class="title">Travel time</div>
+  <div class="title">Consumption</div>
+  <ng-container *ngFor="let result of results">
+    <div><b>{{ result.speedValue }}km/h</b></div>
+    <div class="calculation-result">{{ result.travelTime }}</div>
+    <div class="calculation-result">{{ result.litreConsumption | number: '1.2-2' }}l</div>
+  </ng-container>
+  <div class="title bottom-row">Difference</div>
+  <div class="bottom-row calculation-result">{{ timeDifferenceString }}</div>
+  <div class="bottom-row calculation-result">
+    <span *ngIf="consumptionDifference !== 0">{{ consumptionDifference | number: '1.2-2' }}l</span>
+    <span *ngIf="consumptionDifference === 0">-</span>
+  </div>
+</div>
+

@@ -1,0 +1,39 @@
+@import '../../../../constants.scss';
+
+.cars-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $common-margin-padding;
+}
+
+.car {
+  border: 2px transparent solid; // Adding a transparent border to avoid jumpiness
+  border-radius: 6px;
+  color: white;
+  width: 100px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: brown;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  &:hover:not(.selected) {
+    background-color: chocolate;
+  }
+
+  &:focus:not(.selected) {
+    background-color: chocolate;
+  }
+}
+
+.selected {
+  background-color: #ec1840;
+}

@@ -1,0 +1,21 @@
+@import '../../../../constants.scss';
+
+.speed-container {
+  display: flex; // Make speed inputs in a row
+  gap: $common-margin-padding;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.input {
+  margin-left: 10px; // Space between label and input
+  width: 60px;
+  border-radius: 8px;
+}
+
+.divider {
+  margin: 15px 0;
+  border-color: #b17200
+}

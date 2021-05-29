@@ -1,1 +1,15 @@
+@import 'app/constants.scss';
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: $text-font;
+  background-color: #191919;
+}
+
+input {
+  font-family: $text-font;
+}
+
+input:focus-visible {
+  outline: none; // When focused on an input, white outline is not visible
+}

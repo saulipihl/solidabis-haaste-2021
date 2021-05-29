@@ -1,0 +1,31 @@
+<span *ngIf="errorOccurred">
+  There was an error. Please refresh the page.
+</span>
+<div *ngIf="!errorOccurred">
+  <div class="selectors-wrapper">
+    <div class="step-container">
+      <app-car-selector
+        [selectedCarData]="selectedCarData"
+        [carData]="carData"
+        (carSelected)="onCarSelected($event)"
+      ></app-car-selector>
+    </div>
+
+    <div class="step-container">
+      <app-speed-distance-selector
+        [distance]="distance"
+        [speeds]="speeds"
+        (speedChanged)="onSpeedChanged($event)"
+        (distanceChanged)="onDistanceChanged($event)"
+      ></app-speed-distance-selector>
+    </div>
+  </div>
+
+  <div class="result-container step-container">
+    <app-calculation-results
+      [selectedCarData]="selectedCarData"
+      [distance]="distance"
+      [speeds]="speeds"
+    ></app-calculation-results>
+  </div>
+</div>

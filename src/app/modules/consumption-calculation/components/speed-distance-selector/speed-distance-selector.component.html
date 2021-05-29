@@ -1,0 +1,22 @@
+<h2>Choose the travel distance and comparison speeds</h2>
+<span class="label">Distance:</span>
+<input
+  class="input"
+  type="number"
+  [value]="distance"
+  (change)="onDistanceChanged($event)"/>
+<span> km</span>
+
+<hr class="divider"/>
+
+<div class="speed-container">
+  <div class="speed" *ngFor="let speed of speeds">
+    <span class="label">{{ speed.speedKey }}:</span>
+    <input
+      class="speed-input input"
+      type="number"
+      [value]="speed.value"
+      (change)="onSpeedChanged($event, speed)"/>
+    <span> km/h</span>
+  </div>
+</div>

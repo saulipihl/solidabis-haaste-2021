@@ -1,0 +1,30 @@
+.results-container {
+  flex-direction: column;
+}
+
+.results-inner-container {
+  display: flex;
+  gap: 30px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto auto 110px;
+
+  & div {
+    padding: 6px;
+  }
+}
+
+.calculation-result {
+  text-align: right;
+}
+
+.title {
+  text-align: right;
+  font-weight: bold;
+}
+
+.bottom-row {
+  border-top: 1px #a9a9a9  solid;
+}

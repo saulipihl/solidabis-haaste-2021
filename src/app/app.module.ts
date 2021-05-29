@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ConsumptionCalculationModule } from './modules/consumption-calculation/consumption-calculation.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    ConsumptionCalculationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

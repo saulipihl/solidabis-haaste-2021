@@ -1,0 +1,12 @@
+<h2>Choose a car type</h2>
+<div class="cars-container">
+  <button
+    tabindex="0"
+    class="car"
+    [class.selected]="selectedCarData?.name === car.name"
+    (click)="onCarSelect(car)"
+    (click)="onCarSelect(car)"
+    *ngFor="let car of carData">
+    <span>{{ car.name }}</span>
+  </button>
+</div>
