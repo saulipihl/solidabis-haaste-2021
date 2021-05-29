@@ -62,7 +62,6 @@ export class ConsumptionCalculatorComponent implements OnInit, OnDestroy {
     const replaceIndex = speeds.findIndex(s => s.speedKey === speed.speedKey)
     speeds[replaceIndex] = speed;
     this.speeds = speeds;
-    console.log(this.speeds)
   }
 
   /**

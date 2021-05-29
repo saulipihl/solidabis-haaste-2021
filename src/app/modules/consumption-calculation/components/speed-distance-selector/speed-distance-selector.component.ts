@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { Speed } from '../../models/speed';
 
 /**
@@ -10,10 +10,7 @@ import { Speed } from '../../models/speed';
   styleUrls: ['./speed-distance-selector.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SpeedDistanceSelectorComponent implements OnChanges {
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.speeds)
-  }
+export class SpeedDistanceSelectorComponent {
   @Input() speeds: Speed[];
   @Input() distance: number;
   @Output() speedChanged = new EventEmitter<Speed>();
